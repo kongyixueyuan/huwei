@@ -53,7 +53,7 @@ func (blc *Blockchain) AddBlockToBlockChain(data string) {
 }
 
 //1. 创建带有创世区块的区块链
-func CreateBlockChainWithGeneisBlock() *Blockchain {
+func CreateBlockChainWithGeneisBlock(data string) *Blockchain {
 	//创建创世区块
 	/*
 	genesisBlock := CreateGenesisBlock("Genenis block......")
@@ -74,7 +74,7 @@ func CreateBlockChainWithGeneisBlock() *Blockchain {
 		}
 		if b != nil {
 			//创建创世区块
-			genesisBlock := CreateGenesisBlock("Genesis Data ......")
+			genesisBlock := CreateGenesisBlock(data)
 			//将创世区块保存在区块链上
 			err := b.Put(genesisBlock.Hash, genesisBlock.Serialize())
 			if err != nil {
