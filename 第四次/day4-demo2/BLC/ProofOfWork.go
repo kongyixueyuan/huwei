@@ -28,7 +28,7 @@ func (proofOfWork *ProofOfWork) IsValid() bool {
 //数据拼接，返回字节数组
 func (pow *ProofOfWork) prepareData(nonce int) []byte {
 	data := bytes.Join([][]byte{
-		pow.Block.prevBlockHash,
+		pow.Block.PrevBlockHash,
 		pow.Block.HashTransactions(),
 		IntToHex(pow.Block.Timestamp),
 		IntToHex(int64(targetBit)),

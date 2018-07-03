@@ -7,5 +7,6 @@ import (
 func main() {
 	cli := BLC.CLI{}
 	cli.Run()
+	//BLC.NewCoinbaseTransaction("test")
 
 }

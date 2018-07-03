@@ -32,7 +32,7 @@ func (blockchainIterator *BlockchainIterator) Next() *Block {
 			block = DeserializeBlock(currentBlockBytes)
 
 			// 更新迭代里面的currentHash
-			blockchainIterator.CurrentHash = block.prevBlockHash
+			blockchainIterator.CurrentHash = block.PrevBlockHash
 		}
 
 		return nil

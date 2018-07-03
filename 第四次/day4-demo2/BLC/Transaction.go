@@ -65,6 +65,7 @@ func NewSimpleTransaction(from string, to string, amount int, blockchain *Blockc
 	}
 
 	// 转账
+
 	txOutput := &TXOutput{int64(amount), to}
 	txOutputs = append(txOutputs, txOutput)
 

@@ -3,10 +3,8 @@ package BLC
 type TXInput struct {
 	// 交易的hash
 	Txhash []byte
-
 	// 存储TXOutput在Vout里面的索引
 	Vout int
-
 	// 用户名
 	ScriptSig string
 }

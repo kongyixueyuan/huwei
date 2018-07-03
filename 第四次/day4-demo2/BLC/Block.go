@@ -17,7 +17,7 @@ type Block struct {
 	//1.区块高度
 	Height int64
 	//2.上一个区块的HASH
-	prevBlockHash []byte
+	PrevBlockHash []byte
 	//3.交易数据
 	Txs []*Transaction
 	//4.时间戳
@@ -64,7 +64,7 @@ func DeserializeBlock(blockBytes []byte) *Block {
 //1.创建新的区块 *代表指针  @引用变量的地址
 func NewBlock(txs []*Transaction, height int64, prevBlockHash []byte) *Block {
 	//创建区块
-	block := &Block{Height: height, prevBlockHash: prevBlockHash, Txs: txs, Timestamp: time.Now().Unix(), Hash: nil, Nonce: 0}
+	block := &Block{Height: height,PrevBlockHash: prevBlockHash, Txs: txs, Timestamp: time.Now().Unix(), Hash: nil, Nonce: 0}
 	//调用工作量证明方法并且返回有效的hash和nonce
 	pow := NewProofOfWork(block)
 	//挖矿验证
