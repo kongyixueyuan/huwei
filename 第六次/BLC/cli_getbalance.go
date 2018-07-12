@@ -5,7 +5,7 @@ import (
 	"fmt"
 )
 
-func (cli *Rwq_CLI) HW_getBalance(address string) {
+func (cli *HW_CLI) HW_getBalance(address string) {
 	if !HW_ValidateAddress(address) {
 		log.Panic("错误：地址无效")
 	}
@@ -18,7 +18,7 @@ func (cli *Rwq_CLI) HW_getBalance(address string) {
 	fmt.Printf("地址:%s的余额为：%d\n", address, balance)
 }
 
-func (cli *Rwq_CLI) rwq_getBalanceAll() {
+func (cli *HW_CLI) HW_getBalanceAll() {
 	wallets, err := HW_NewWallets()
 	if err != nil {
 		log.Panic(err)

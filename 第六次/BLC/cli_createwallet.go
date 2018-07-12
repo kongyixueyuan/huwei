@@ -2,7 +2,7 @@ package BLC
 
 import "fmt"
 
-func (cli *Rwq_CLI) HW_createWallet() {
+func (cli *HW_CLI) HW_createWallet() {
 
 	wallets, _ := HW_NewWallets()
 	address := wallets.HW_NewWallet().HW_GetAddress()

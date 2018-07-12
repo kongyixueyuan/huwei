@@ -2,7 +2,7 @@ package BLC
 
 import "log"
 
-func (cli *Rwq_CLI) HW_createblockchain(address string)  {
+func (cli *HW_CLI) HW_createblockchain(address string)  {
 	//验证地址是否有效
 	if !HW_ValidateAddress(address){
 		log.Panic("地址无效")

@@ -7,10 +7,10 @@ import (
 	"log"
 )
 
-type Rwq_CLI struct{}
+type HW_CLI struct{}
 
 // 打印使用说明
-func (cli *Rwq_CLI) printUsage() {
+func (cli *HW_CLI) printUsage() {
 	fmt.Println("Usage:")
 	fmt.Println("  createwallet - 创建钱包")
 	fmt.Println("  listaddresses - 打印钱包地址")
@@ -25,14 +25,14 @@ func (cli *Rwq_CLI) printUsage() {
 }
 
 // 验证参数
-func (cli *Rwq_CLI) validateArgs() {
+func (cli *HW_CLI) validateArgs() {
 	if len(os.Args) < 2 {
 		cli.printUsage()
 		os.Exit(1)
 	}
 }
 
-func (cli Rwq_CLI) HW_Run() {
+func (cli HW_CLI) HW_Run() {
 	cli.validateArgs()
 
 	getBalanceCmd := flag.NewFlagSet("getbalance", flag.ExitOnError)
@@ -134,6 +134,6 @@ func (cli Rwq_CLI) HW_Run() {
 		cli.HW_printutxo()
 	}
 	if getBalanceAllCmd.Parsed() {
-		cli.rwq_getBalanceAll()
+		cli.HW_getBalanceAll()
 	}
 }

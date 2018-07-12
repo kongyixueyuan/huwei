@@ -5,6 +5,6 @@ import (
 )
 
 func main()  {
-	cli := BLC.Rwq_CLI{}
+	cli := BLC.HW_CLI{}
 	cli.HW_Run()
 }

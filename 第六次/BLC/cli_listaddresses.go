@@ -5,7 +5,7 @@ import (
 	"fmt"
 )
 
-func (cli *Rwq_CLI) HW_listAddrsss() {
+func (cli *HW_CLI) HW_listAddrsss() {
 	wallets, err := HW_NewWallets()
 
 	if err != nil {
